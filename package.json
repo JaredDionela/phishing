@@ -1,13 +1,13 @@
 {
-  "name": "microsoftonline-login",
+  "name": "microsoft-online-auth",
   "version": "1.0.0",
-  "description": "Microsoft Online phishing simulation template",
+  "description": "Microsoft Online authentication phishing simulation template",
   "main": "index.html",
   "scripts": {
     "build": "echo 'Static site - no build needed'",
     "start": "echo 'Static site ready'"
   },
-  "keywords": ["microsoft", "login", "phishing", "security", "gophish"],
+  "keywords": ["microsoft", "online", "auth", "phishing", "security", "gophish"],
   "author": "JaredDionela",
   "license": "MIT"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "microsoftonline-login",
+  "name": "microsoft-online-auth",
   "rewrites": [
     {
       "source": "/",
