@@ -1,5 +1,7 @@
 {
   "name": "microsoft-online-auth",
+  "outputDirectory": ".",
+  "buildCommand": null,
   "rewrites": [
     {
       "source": "/",
