@@ -36,14 +36,26 @@ This is a Microsoft Account-themed landing page designed for use with GoPhish ph
 
 ## Hosting Options
 
-### Option 1: GoPhish Built-in Hosting
+### Option 1: GoPhish Built-in Hosting (Recommended for Testing)
 - Use GoPhish's built-in web server
 - Template will be served directly from GoPhish
 
-### Option 2: External Hosting + GoPhish Integration
-- Host on InfinityFree or similar service
+### Option 2: Vercel Hosting + GoPhish Integration
+- Host on Vercel for professional deployment
 - Modify the GoPhish script URL to point to your GoPhish server
 - Update CORS settings in GoPhish if needed
+
+#### Vercel Deployment Steps:
+1. Push your code to GitHub (already done!)
+2. Go to https://vercel.com and sign up/login
+3. Click "New Project"
+4. Import your GitHub repository: `JaredDionela/phishing`
+5. Deploy with default settings
+6. Your site will be live at: `https://your-project-name.vercel.app`
+
+### Option 3: InfinityFree Hosting
+- Alternative free hosting option
+- Upload files manually to htdocs folder
 
 ## File Structure
 
